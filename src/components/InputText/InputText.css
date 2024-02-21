@@ -1,0 +1,8 @@
+.icon {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}

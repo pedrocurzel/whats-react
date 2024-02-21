@@ -1,0 +1,32 @@
+.loading {
+    height: 150px;
+    width:  150px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(black, black,black, white);
+    animation: animate 1.2s linear infinite;
+    position: fixed;
+    top:-100%; right:-100%; left:-100%; bottom:-100%;
+    margin:auto;
+    z-index:10;
+}
+
+.circle {
+    height: 135px;
+    width:  135px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

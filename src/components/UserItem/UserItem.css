@@ -1,0 +1,118 @@
+.item {
+    width: 100%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.selected-user {
+    border: 1px solid red;
+}
+
+.item:hover {
+    cursor: pointer;
+}
+
+p {
+    display: inline-block;
+    margin: 0px 15px 0px 0px !important;
+
+}
+
+.itemAnimation {
+    animation-name: animationForward;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    .user-img {
+        animation-name: imgAnimationForward;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.itemAnimationBackward {
+    animation-name: animationBackward;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    .user-img {
+        animation-name: imgAnimationBackward;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.notification-counter-container {
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.notification-counter {
+    width:  25px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.user-img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 30px;
+}
+
+@keyframes animationBackward {
+    from {
+        box-shadow: rgba(0, 0, 0, 0.55) 0px 8px 18px;
+        height: 95px;
+    }
+    to {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 70px;
+    }
+}
+
+@keyframes animationForward {
+    from {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    to {
+        box-shadow: rgba(0, 0, 0, 0.55) 0px 8px 18px;
+        height: 95px;
+    }
+}
+
+@keyframes imgAnimationBackward {
+    from {
+        height: 55px;
+        width:  55px;
+    }
+    to {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@keyframes imgAnimationForward {
+    from {
+        height: 35px;
+        width: 35px;
+    }
+    to {
+        height: 55px;
+        width:  55px;
+    }
+}
