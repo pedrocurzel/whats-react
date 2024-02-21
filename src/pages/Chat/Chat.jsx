@@ -17,7 +17,8 @@ const Chat = (props) => {
             let msg = {
                 text: messageParam.message,
                 receiverId: messageParam.receiverId,
-                senderId: messageParam.senderId
+                senderId: messageParam.senderId,
+                ...messageParam
             }
             setMessages([...messages, msg]);
             scrollToLastMessage();
@@ -62,6 +63,7 @@ const Chat = (props) => {
             setMessage("");
             setMessages([...messages, resJson.response]);
             scrollToLastMessage();
+            messg.createdAt = resJson.response.createdAt;
             socket.emit("message-sent", messg);
         } catch(error) {
 
