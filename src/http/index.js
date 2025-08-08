@@ -27,7 +27,7 @@ const apiFunctions = {
         return await fetch(url + endpoint, {
             method: "POST",
             headers,
-            body: JSONBody
+            body: JSONBody,
         });
     }
 }

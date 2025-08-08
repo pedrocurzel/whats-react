@@ -4,6 +4,7 @@
     flex-grow: 2;
     border-radius: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .chat-text-space {
@@ -43,4 +44,19 @@ button:disabled {
 
 button {
     background-color: lightgreen;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.addFileButton {
+    padding: 0px !important;
+    text-align: center;
+}
+
+.upload-button {
+    background-color: lightgreen;
+    border: 1px solid black;
+    box-shadow: inset 1px 1px 1px 1px black;
 }
